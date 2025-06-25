@@ -1,0 +1,21 @@
+baseURL = "https://mohdsahlpa.github.io/"
+title = "sahl"
+theme = "PaperMod"
+languageCode = "en-us"
+enableInlineShortcodes = true
+
+[params]
+  author = "mohdsahlpa"
+  description = "CS Student | Developer | Hacker | Learner"
+  ShowBreadCrumbs = true
+  ShowReadingTime = true
+
+[[menu.main]]
+  name = 'Projects'
+  url = '/projects/'
+  weight = 1
+
+[[menu.main]]
+  name = 'Blog'
+  url = '/posts/'
+  weight = 2
