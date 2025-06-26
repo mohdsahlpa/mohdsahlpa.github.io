@@ -1,14 +1,53 @@
 baseURL: https://example.org/
 languageCode: en-us
-title: sahl.
+title: sahl's blog.
 theme: ["PaperMod"]
+
 params:
   homeInfoParams:
-    Title: Hi there wave
-    Content: Can be Info, links, about...
-
-  socialIcons: # optional
+    Title: Always be who you are and try to be there for others who matter.
+    Content: |
+             - **Knowing you know nothing is the beginning of true wisdom - Socrates.**
+             - You might think you know nothing, but you know more than you think and I suppose that is why you are here :).
+  label:
+    text: "Sahl's blog"
+    # icon: favicon.png
+    iconHeight: 25
+  socialIcons:
     - name: "github"
-      url: "<link>"
+      url: "https://github.com/mohdsahlpa"
     - name: "linkedin"
-      url: "<link2>"
+      url: "https://www.linkedin.com/in/mohammedsahalpa/"
+
+  ShowReadingTime: true
+  ShowCodeCopyButtons: true
+  ShowToc: true
+
+taxonomies:
+    tag: tags
+    series: series
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+menu:
+  main:
+    - identifier: about
+      name: about
+      url: /about/
+      weight: 10
+    - identifier: search
+      name: search
+      url: /search/
+      weight: 20
+    - identifier: tags
+      name: tags
+      url: /tags/
+      weight: 30
+    - identifier: projects
+      name: projects
+      url: /projects/
+      weight: 40
