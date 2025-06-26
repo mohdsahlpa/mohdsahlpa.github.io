@@ -1,6 +1,6 @@
 ---
-title: 'Welcome to my blog!'
-image: images/about.png
+title: 'welcome to my blog!'
+# image: images/about.png
 ShowToc: false
 ---
 

@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>sahl&#39;s blog.</title>
-    <link>https://example.org/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on sahl&#39;s blog.</description>
     <generator>Hugo -- 0.147.9</generator>
     <language>en-us</language>
-    <atom:link href="https://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>https://example.org/projects/</link>
+      <link>http://localhost:1313/projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.org/projects/</guid>
+      <guid>http://localhost:1313/projects/</guid>
       <description></description>
     </item>
     <item>
-      <title>How to do nothing.!!</title>
-      <link>https://example.org/posts/post1/</link>
+      <title>how to do nothing.!!</title>
+      <link>http://localhost:1313/posts/post1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.org/posts/post1/</guid>
-      <description>&lt;h1 id=&#34;hello-wolrd&#34;&gt;Hello Wolrd&lt;/h1&gt;</description>
+      <guid>http://localhost:1313/posts/post1/</guid>
+      <description>&lt;h1 id=&#34;hello-wolrd&#34;&gt;hello Wolrd&lt;/h1&gt;</description>
     </item>
     <item>
-      <title>Welcome to my blog!</title>
-      <link>https://example.org/about/</link>
+      <title>welcome to my blog!</title>
+      <link>http://localhost:1313/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.org/about/</guid>
+      <guid>http://localhost:1313/about/</guid>
       <description>&lt;p&gt;I am &lt;strong&gt;Sahl&lt;/strong&gt; and I break stuff.&lt;/p&gt;</description>
     </item>
   </channel>

@@ -1,9 +1,9 @@
 ---
-title: "How to do nothing.!!"
+title: "how to do nothing.!!"
 tags:
  - hey
  - test
 ---
 
-# Hello Wolrd
+# hello Wolrd
 

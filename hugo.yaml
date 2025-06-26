@@ -1,16 +1,16 @@
-baseURL: https://example.org/
+baseURL: https://mohdsahlpa.github.io/
 languageCode: en-us
 title: sahl's blog.
 theme: ["PaperMod"]
 
 params:
   homeInfoParams:
-    Title: Always be who you are and try to be there for others who matter.
+    Title: be who you are and try to be there for others who matter.
     Content: |
-             - **Knowing you know nothing is the beginning of true wisdom - Socrates.**
-             - You might think you know nothing, but you know more than you think and I suppose that is why you are here :).
+             - **knowing you know nothing is the beginning of true wisdom - Socrates.**
+             - you might think you know nothing, but you know more than you think and I suppose that is why you are here :).
   label:
-    text: "Sahl's blog"
+    text: "sahl's blog"
     # icon: favicon.png
     iconHeight: 25
   socialIcons:
@@ -22,6 +22,8 @@ params:
   ShowReadingTime: true
   ShowCodeCopyButtons: true
   ShowToc: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
 
 taxonomies:
     tag: tags
