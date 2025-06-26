@@ -5,10 +5,9 @@ theme: ["PaperMod"]
 
 params:
   homeInfoParams:
-    Title: be who you are and try to be there for others who matter.
+    Title: move fast and break things.
     Content: |
              - **knowing you know nothing is the beginning of true wisdom - Socrates.**
-             - you might think you know nothing, but you know more than you think and I suppose that is why you are here :).
   label:
     text: "sahl's blog"
     # icon: favicon.png
