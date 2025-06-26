@@ -1,0 +1,14 @@
+baseURL: https://example.org/
+languageCode: en-us
+title: sahl.
+theme: ["PaperMod"]
+params:
+  homeInfoParams:
+    Title: Hi there wave
+    Content: Can be Info, links, about...
+
+  socialIcons: # optional
+    - name: "github"
+      url: "<link>"
+    - name: "linkedin"
+      url: "<link2>"
