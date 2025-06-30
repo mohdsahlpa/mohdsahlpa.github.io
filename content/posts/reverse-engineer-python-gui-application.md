@@ -1,20 +1,20 @@
 ---
-title: "Reverse Engineering a Python GUI Application Built with PyInstaller"
+title: "reverse engineering a python application built using pyinstaller"
 date: 2025-06-30
 author: "mohdsahlpa"
-description: "A step-by-step deep dive into reverse engineering a PyInstaller-packed Python GUI executable to recover its source code."
+description: "a step-by-step deep dive into reverse engineering a pyinstaller-bundled python executable to recover its source code."
 tags: ["reverse engineering", "pyinstaller", "python", "security"]
 ---
 
-> _Disclaimer: This blog post is meant strictly for educational and ethical security research. Do not reverse engineer software without permission._
+> _Disclaimer: this blog post is meant strictly for educational and ethical security research. Do not reverse engineer software without permission._
 
-## 🧠 Introduction
+## 🧠 introduction
 
-Reverse engineering Python applications can be fascinating, especially when they’re bundled into `.exe` files using tools like PyInstaller. In this post, I'll walk you through how I deconstructed a Windows executable (`app.exe`), identified it as a PyInstaller package, and recovered the original `app.py` source code.
+reverse engineering python applications can be fascinating, especially when they’re bundled into `.exe` files using tools like pyinstaller. In this post, I'll walk you through how I deconstructed a windows executable (`app.exe`), identified it as a pyinstaller package, and recovered the original `app.py` source code.
 
 ---
 
-## 🔍 Step 1: Passive Reconnaissance
+## 🔍 step 1: passive recon
 
 I started with no source just a single `app.exe` binary.
 
@@ -36,7 +36,7 @@ _pyinstaller_pyz
 ```
 this confirms that it is a pyinstaller bundled python application.
 
-## 🔧 Step 2: Extraction
+## 🔧 step 2: extraction
 
 ### using an extractor
 
@@ -175,13 +175,13 @@ root.mainloop()
 
 this looks like an application that uses your webcam to display a real-time video feed with OpenCV.
 
-## 📦 Lessons To Note
+## 📦 lessons to note
 - pyInstaller doesn't truly compile it's packages.
 - security through obscurity isn’t real security.
 - tools like `pyinstxtractor`, `pycdc` are powerful allies for binary introspection.
 - always check the Python version before decompiling.
 
-## 📌 Final Thoughts
+## 📌 final thoughts
 
 reverse engineering can be easy with the help of AI tools like chatgpt and likely tooling but still requires a methodical approach.
 
