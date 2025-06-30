@@ -1,33 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>sahl&#39;s blog.</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content on sahl&#39;s blog.</description>
+    <title>Security on sahl&#39;s blog.</title>
+    <link>http://localhost:1313/tags/security/</link>
+    <description>Recent content in Security on sahl&#39;s blog.</description>
     <generator>Hugo -- 0.147.9</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 30 Jun 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/security/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Reverse Engineering a Python GUI Application Built with PyInstaller</title>
       <link>http://localhost:1313/posts/reverse-engineer-python-gui-application/</link>
       <pubDate>Mon, 30 Jun 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/reverse-engineer-python-gui-application/</guid>
       <description>A step-by-step deep dive into reverse engineering a PyInstaller-packed Python GUI executable to recover its source code.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>http://localhost:1313/projects/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>welcome to my blog!</title>
-      <link>http://localhost:1313/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/about/</guid>
-      <description>&lt;p&gt;I am &lt;strong&gt;Sahl&lt;/strong&gt; and I break stuff.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
