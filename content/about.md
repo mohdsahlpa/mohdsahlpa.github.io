@@ -4,6 +4,6 @@ title: 'welcome to my blog!'
 ShowToc: false
 ---
 
+I am **sahl** and I make, break and hack stuff. 
 
-
-I am **Sahl** and I break stuff. 
+get my resume [here](/files/resume.pdf)
