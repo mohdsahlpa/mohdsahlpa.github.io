@@ -10,8 +10,8 @@ params:
              - **knowing you know nothing is the beginning of true wisdom - Socrates.**
   label:
     text: "sahl's blog"
-    # icon: favicon.png
-    iconHeight: 25
+    icon: images/profile.jpg
+    iconHeight: 40
   socialIcons:
     - name: "github"
       url: "https://github.com/mohdsahlpa"

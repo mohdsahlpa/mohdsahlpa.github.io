@@ -1,7 +1,6 @@
 ---
-title: "search" # in any language you want
-layout: "search" # necessary for search
-# description: "Description for Search"
+title: "search"
+layout: "search"
 summary: "search"
 placeholder: "search now."
 ---

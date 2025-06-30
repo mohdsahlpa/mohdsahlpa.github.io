@@ -5,9 +5,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>Reverse Engineering a Python GUI Application Built with PyInstaller | sahl&#39;s blog.</title>
+<title>reverse engineering a python application built using pyinstaller | sahl&#39;s blog.</title>
 <meta name="keywords" content="reverse engineering, pyinstaller, python, security">
-<meta name="description" content="A step-by-step deep dive into reverse engineering a PyInstaller-packed Python GUI executable to recover its source code.">
+<meta name="description" content="a step-by-step deep dive into reverse engineering a pyinstaller-bundled python executable to recover its source code.">
 <meta name="author" content="mohdsahlpa">
 <link rel="canonical" href="http://localhost:1313/posts/reverse-engineer-python-gui-application/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.36819bea596090d8b48cf10d9831382996197aa7e4fc86f792f7c08c9ca4d23b.css" integrity="sha256-NoGb6llgkNi0jPENmDE4KZYZeqfk/Ib3kvfAjJyk0js=" rel="preload stylesheet" as="style">
@@ -73,7 +73,9 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="sahl&#39;s blog (Alt + H)">sahl&#39;s blog</a>
+            <a href="http://localhost:1313/" accesskey="h" title="sahl&#39;s blog (Alt + H)">
+                <img src="http://localhost:1313/images/profile.jpg" alt="" aria-label="logo"
+                    height="40">sahl&#39;s blog</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -127,10 +129,10 @@
   <header class="post-header">
     <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
     <h1 class="post-title entry-hint-parent">
-      Reverse Engineering a Python GUI Application Built with PyInstaller
+      reverse engineering a python application built using pyinstaller
     </h1>
     <div class="post-description">
-      A step-by-step deep dive into reverse engineering a PyInstaller-packed Python GUI executable to recover its source code.
+      a step-by-step deep dive into reverse engineering a pyinstaller-bundled python executable to recover its source code.
     </div>
     <div class="post-meta"><span title='2025-06-30 00:00:00 +0000 UTC'>June 30, 2025</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;mohdsahlpa
 
@@ -143,15 +145,15 @@
 
         <div class="inner"><ul>
                 <li>
-                    <a href="#-introduction" aria-label="🧠 Introduction">🧠 Introduction</a></li>
+                    <a href="#-introduction" aria-label="🧠 introduction">🧠 introduction</a></li>
                 <li>
-                    <a href="#-step-1-passive-reconnaissance" aria-label="🔍 Step 1: Passive Reconnaissance">🔍 Step 1: Passive Reconnaissance</a><ul>
+                    <a href="#-step-1-passive-recon" aria-label="🔍 step 1: passive recon">🔍 step 1: passive recon</a><ul>
                         
                 <li>
                     <a href="#checking-file-properties" aria-label="checking file properties">checking file properties</a></li></ul>
                 </li>
                 <li>
-                    <a href="#-step-2-extraction" aria-label="🔧 Step 2: Extraction">🔧 Step 2: Extraction</a><ul>
+                    <a href="#-step-2-extraction" aria-label="🔧 step 2: extraction">🔧 step 2: extraction</a><ul>
                         
                 <li>
                     <a href="#using-an-extractor" aria-label="using an extractor">using an extractor</a></li>
@@ -159,9 +161,9 @@
                     <a href="#decompilation" aria-label="decompilation">decompilation</a></li></ul>
                 </li>
                 <li>
-                    <a href="#-lessons-to-note" aria-label="📦 Lessons To Note">📦 Lessons To Note</a></li>
+                    <a href="#-lessons-to-note" aria-label="📦 lessons to note">📦 lessons to note</a></li>
                 <li>
-                    <a href="#-final-thoughts" aria-label="📌 Final Thoughts">📌 Final Thoughts</a>
+                    <a href="#-final-thoughts" aria-label="📌 final thoughts">📌 final thoughts</a>
                 </li>
             </ul>
         </div>
@@ -169,11 +171,11 @@
 </div>
 
   <div class="post-content"><blockquote>
-<p><em>Disclaimer: This blog post is meant strictly for educational and ethical security research. Do not reverse engineer software without permission.</em></p></blockquote>
-<h2 id="-introduction">🧠 Introduction<a hidden class="anchor" aria-hidden="true" href="#-introduction">#</a></h2>
-<p>Reverse engineering Python applications can be fascinating, especially when they’re bundled into <code>.exe</code> files using tools like PyInstaller. In this post, I&rsquo;ll walk you through how I deconstructed a Windows executable (<code>app.exe</code>), identified it as a PyInstaller package, and recovered the original <code>app.py</code> source code.</p>
+<p><em>Disclaimer: this blog post is meant strictly for educational and ethical security research. Do not reverse engineer software without permission.</em></p></blockquote>
+<h2 id="-introduction">🧠 introduction<a hidden class="anchor" aria-hidden="true" href="#-introduction">#</a></h2>
+<p>reverse engineering python applications can be fascinating, especially when they’re bundled into <code>.exe</code> files using tools like pyinstaller. In this post, I&rsquo;ll walk you through how I deconstructed a windows executable (<code>app.exe</code>), identified it as a pyinstaller package, and recovered the original <code>app.py</code> source code.</p>
 <hr>
-<h2 id="-step-1-passive-reconnaissance">🔍 Step 1: Passive Reconnaissance<a hidden class="anchor" aria-hidden="true" href="#-step-1-passive-reconnaissance">#</a></h2>
+<h2 id="-step-1-passive-recon">🔍 step 1: passive recon<a hidden class="anchor" aria-hidden="true" href="#-step-1-passive-recon">#</a></h2>
 <p>I started with no source just a single <code>app.exe</code> binary.</p>
 <h3 id="checking-file-properties">checking file properties<a hidden class="anchor" aria-hidden="true" href="#checking-file-properties">#</a></h3>
 <p>first, I ran the classic:</p>
@@ -184,7 +186,7 @@
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ strings app.exe | grep pyinstaller <span style="color:#75715e"># should return strings matching pyinstaller</span>
 </span></span><span style="display:flex;"><span>_pyinstaller_pyz
 </span></span></code></pre></div><p>this confirms that it is a pyinstaller bundled python application.</p>
-<h2 id="-step-2-extraction">🔧 Step 2: Extraction<a hidden class="anchor" aria-hidden="true" href="#-step-2-extraction">#</a></h2>
+<h2 id="-step-2-extraction">🔧 step 2: extraction<a hidden class="anchor" aria-hidden="true" href="#-step-2-extraction">#</a></h2>
 <h3 id="using-an-extractor">using an extractor<a hidden class="anchor" aria-hidden="true" href="#using-an-extractor">#</a></h3>
 <p>these pyinstaller bundled <code>.exe</code> files are like a zip file which we could just extract using tools like <a href="https://github.com/extremecoders-re/pyinstxtractor/">pyinstxtractor</a>.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ python3 pyinstxtractor.py app.exe
@@ -305,14 +307,14 @@
 </span></span><span style="display:flex;"><span>root<span style="color:#f92672">.</span>protocol(<span style="color:#e6db74">&#39;WM_DELETE_WINDOW&#39;</span>, app<span style="color:#f92672">.</span>on_close)
 </span></span><span style="display:flex;"><span>root<span style="color:#f92672">.</span>mainloop()
 </span></span></code></pre></div><p>this looks like an application that uses your webcam to display a real-time video feed with OpenCV.</p>
-<h2 id="-lessons-to-note">📦 Lessons To Note<a hidden class="anchor" aria-hidden="true" href="#-lessons-to-note">#</a></h2>
+<h2 id="-lessons-to-note">📦 lessons to note<a hidden class="anchor" aria-hidden="true" href="#-lessons-to-note">#</a></h2>
 <ul>
 <li>pyInstaller doesn&rsquo;t truly compile it&rsquo;s packages.</li>
 <li>security through obscurity isn’t real security.</li>
 <li>tools like <code>pyinstxtractor</code>, <code>pycdc</code> are powerful allies for binary introspection.</li>
 <li>always check the Python version before decompiling.</li>
 </ul>
-<h2 id="-final-thoughts">📌 Final Thoughts<a hidden class="anchor" aria-hidden="true" href="#-final-thoughts">#</a></h2>
+<h2 id="-final-thoughts">📌 final thoughts<a hidden class="anchor" aria-hidden="true" href="#-final-thoughts">#</a></h2>
 <p>reverse engineering can be easy with the help of AI tools like chatgpt and likely tooling but still requires a methodical approach.</p>
 <p>always make sure you’re authorized to reverse engineer the application you’re looking into. This stuff gets legally gray real fast.</p>
 

@@ -9,11 +9,11 @@
     <lastBuildDate>Mon, 30 Jun 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/reverse-engineering/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Reverse Engineering a Python GUI Application Built with PyInstaller</title>
+      <title>reverse engineering a python application built using pyinstaller</title>
       <link>http://localhost:1313/posts/reverse-engineer-python-gui-application/</link>
       <pubDate>Mon, 30 Jun 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/reverse-engineer-python-gui-application/</guid>
-      <description>A step-by-step deep dive into reverse engineering a PyInstaller-packed Python GUI executable to recover its source code.</description>
+      <description>a step-by-step deep dive into reverse engineering a pyinstaller-bundled python executable to recover its source code.</description>
     </item>
   </channel>
 </rss>
